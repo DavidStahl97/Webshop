@@ -1,0 +1,14 @@
+model\Article.class
+servlets\LoginServlet.class
+servlets\PaymentServlet.class
+model\OrderBackend.class
+model\OrderManagement.class
+servlets\OrdersServlet.class
+model\Order.class
+model\PriceRange.class
+controller\LoginController.class
+servlets\ShopItemsServlet.class
+controller\ItemsController.class
+controller\OrderController.class
+servlets\HelloServlet.class
+model\ShopItem.class
