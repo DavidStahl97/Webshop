@@ -1,7 +1,11 @@
-.background {
+.color-level-one {
     background-color: aqua;
 }
 
-.foreground {
-    background-color: green;
+.color-level-two {
+    background-color: #23b14e;
+}
+
+.color-level-three {
+    background-color: yellow;
 }
