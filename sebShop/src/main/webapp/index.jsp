@@ -7,13 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>SEB19 Shop</title>
     <link rel="stylesheet" href="css/customCSS.css" >
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/Login.js"></script>
+    <script src="js/ShopMain.js"></script>
+
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
-                $("#div1").load("html/Hallo.html");
-            });
+            $("body").load("html/Login.html");
         });
     </script>
 </head>
