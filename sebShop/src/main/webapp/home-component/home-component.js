@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 
 $("#details-button").click(function(){
     $("body").load("details-component/home-component.html");
@@ -5,4 +7,5 @@ $("#details-button").click(function(){
 
 $("#buy-button").click(function(){
     $("body").load("product-list-component/product-list-component.html");
+});
 });
