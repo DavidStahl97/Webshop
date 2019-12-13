@@ -13,7 +13,7 @@
 
     <script>
         $(document).ready(function(){
-            $("body").load("login/Login.html");
+            $("body").load("login-component/login-component.html");
         });
     </script>
 </head>
