@@ -17,7 +17,7 @@
         });
     </script>
 </head>
-<body>
+<body class="color-level-one">
 
 </body>
 </html>
