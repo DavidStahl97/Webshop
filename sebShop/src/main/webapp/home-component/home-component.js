@@ -2,9 +2,9 @@
 
 
 $("#details-button").click(function(){
-    $("body").load("details-component/home-component.html");
+    $("body").load("details-component/details-component.html");
 });
 
 $("#buy-button").click(function(){
-    $("body").load("product-list-component/product-list-component.html");
+    $("body").load("production-list-component/product-list-component.html");
 });
