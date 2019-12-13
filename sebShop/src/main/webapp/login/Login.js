@@ -1,4 +1,4 @@
 
     $("#login-button").click(function(){
-        $("body").load("html/ShopMain.html");
+        $("body").load("home/ShopMain.html");
     });
