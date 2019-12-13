@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>SEB19 Shop</title>
 
+    <link rel="stylesheet" type="text/css" href="global.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
