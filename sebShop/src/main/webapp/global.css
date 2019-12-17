@@ -1,11 +1,7 @@
-.color-level-one {
-    background-color: #9ad8ea;
+body {
+    padding-top: 50px;
 }
-
-.color-level-two {
-    background-color: #23b14e;
-}
-
-.color-level-three {
-    background-color: #fff200;
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
 }

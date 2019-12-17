@@ -2,5 +2,5 @@
 
 
 $("#back-button").click(function(){
-    $("body").load("home-component/home-component.html");
+    $("#main-div").load("home-component/home-component.html");
 });
