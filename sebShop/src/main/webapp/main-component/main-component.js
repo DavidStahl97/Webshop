@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    // to prevent the default href link click
+    $('.nav-link').click(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+    });
+
     $("#product-list-link").click(function () {
         $("#main-div").load("product-list-component/product-list-component.html");
     });
