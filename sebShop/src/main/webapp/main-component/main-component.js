@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
     $("#product-list-link").click(function () {
-        $("#main-div").load("product-list-component/product-list-component.html");
+        $("#main-div").load("ordering-process-component/ordering-process-component.html");
     });
 
     $("#home-link").click(function () {
