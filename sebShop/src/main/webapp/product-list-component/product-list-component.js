@@ -1,10 +1,7 @@
 $(document).ready(function () {
 
     $('#next-button').click(function () {
-        $('#process-list-icon').removeClass('fa-cart-arrow-down');
-        $('#process-list-icon').addClass('fa-check-circle');
-
-        $('#ordering-process-container').load('payment-component/payment-component.html');
+        nextElement();
     });
 
     $.ajax({
