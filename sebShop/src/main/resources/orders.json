@@ -55,7 +55,18 @@
         "price" : 99.99
       } ],
       "orderNo" : 5
+    }, {
+      "user" : "TestUser",
+      "totalprice" : 99.99,
+      "date" : "2019-12-29 13-35-10",
+      "articles" : [ {
+        "itemName" : "Test Tshirt",
+        "size" : "M",
+        "quantity" : 1,
+        "price" : 99.99
+      } ],
+      "orderNo" : 6
     } ]
   },
-  "numberOfOrders" : 5
+  "numberOfOrders" : 6
 }

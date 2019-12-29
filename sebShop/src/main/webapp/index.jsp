@@ -21,6 +21,7 @@
     <link href="/fontawesome-free-5.12.0-web/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome-free-5.12.0-web/css/brands.css" rel="stylesheet">
     <link href="/fontawesome-free-5.12.0-web/css/solid.css" rel="stylesheet">
+    <link href="/fontawesome-free-5.12.0-web/css/regular.css" rel="stylesheet">
 
     <!-- Place your stylesheet here-->
     <link href="global.css" rel="stylesheet" type="text/css">
