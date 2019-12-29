@@ -2,3 +2,11 @@
     width: 20%;
     height: 20%;
 }
+
+.selection-component {
+    max-width: 100px;
+}
+
+.vertical-center-element {
+    vertical-align: middle;
+}

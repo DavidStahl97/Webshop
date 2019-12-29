@@ -1,3 +1,10 @@
+var order = {
+   payment: '',
+   price: 0,
+   date: Date.now(),
+   articles: []
+};
+
 let ordering_elements = [
    {
       name: 'product-list',
@@ -36,16 +43,41 @@ function nextElement() {
    $('#ordering-process-container').load(`${ element.name }-component\\${ element.name }-component.html`);
 }
 
-$(document).ready(function () {
+function on_back_button_click() {
+   const left_element = ordering_elements[current_element - 1];
+
+   $(`#${ left_element.name }-icon`).removeClass('fa-check-circle');
+   $(`#${ left_element.name }-icon`).addClass(`${ left_element.icon_class }`);
+
+   current_element = current_element - 2;
    nextElement();
+}
 
-   $('#back-button').click(function () {
-      const left_element = ordering_elements[current_element - 1];
+function save_articles() {
+   $.ajax({
+      url: 'http://localhost:8080/shopItemsServlet',
+      data: {},
+      type: 'GET',
+      success: function (data) {
+         let shop_items = JSON.parse(data);
 
-      $(`#${ left_element.name }-icon`).removeClass('fa-check-circle');
-      $(`#${ left_element.name }-icon`).addClass(`${ left_element.icon_class }`);
+         for(let i = 0; i < 5; i++) {
+            order.articles.push({
+               itemName: shop_items[i].id,
+               price: shop_items[i].price,
+               size: 'XSS',
+               quantity: 1,
+               imgPath: shop_items[i].imgPath
+            });
+         }
 
-      current_element = current_element - 2;
-      nextElement();
+         nextElement();
+      }
    });
+}
+
+$(document).ready(function () {
+   $('#back-button').click(function () { on_back_button_click() });
+
+   save_articles();
 });
