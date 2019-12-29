@@ -3,6 +3,7 @@ function show_articles() {
     for(const article of order.articles) {
         const select_size_id = `select-size-${ i }`;
         const select_quantity_id = `select-quantity-${ i }`;
+        const small_article_price_id = `small-article-price-${ i }`;
 
         $("#product-list-group").append(`
             <div class="list-group-item">
@@ -34,7 +35,7 @@ function show_articles() {
                             <option>9</option>
                         </select>
                     </div>                   
-                    <small>${ article.price }</small>
+                    <small id="${ small_article_price_id }">${ article.price }</small>
                 </div>                        
             </div>
         `);
@@ -45,7 +46,7 @@ function show_articles() {
             order.articles[index].size = this.value;
         });
 
-        $(`#${ select_size_id }`).on('change', '', function (e) {
+        $(`#${ select_quantity_id }`).on('change', '', function (e) {
             const n = 'select-quantity-'.length;
             const index = this.id.substr(n, this.id.length - 1);
             order.articles[index].quantity = this.value;
@@ -62,3 +63,5 @@ $(document).ready(function () {
 
     show_articles();
 });
+
+  
