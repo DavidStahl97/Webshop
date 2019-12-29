@@ -16,10 +16,15 @@ let ordering_elements = [
 let current_element = -1;
 
 function nextElement() {
-   console.log('next element');
-
    current_element++;
    const element = ordering_elements[current_element];
+
+   if (current_element == 0) {
+      $('#back-button').css('visibility', 'hidden');
+   }
+   else {
+      $('#back-button').css('visibility', 'visible');
+   }
 
    if (current_element > 0) {
       const left_element = ordering_elements[current_element - 1];
@@ -33,4 +38,14 @@ function nextElement() {
 
 $(document).ready(function () {
    nextElement();
+
+   $('#back-button').click(function () {
+      const left_element = ordering_elements[current_element - 1];
+
+      $(`#${ left_element.name }-icon`).removeClass('fa-check-circle');
+      $(`#${ left_element.name }-icon`).addClass(`${ left_element.icon_class }`);
+
+      current_element = current_element - 2;
+      nextElement();
+   });
 });
