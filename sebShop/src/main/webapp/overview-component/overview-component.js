@@ -1,4 +1,5 @@
 function show_articles_summary() {
+    let totalPrice = 0.0;
     for(const article of order.articles) {
         $("#overview-list-group").append(`
             <div class="list-group-item">
@@ -15,7 +16,15 @@ function show_articles_summary() {
                 </div>                        
             </div>
         `);
+
+        totalPrice += article.price * article.quantity;
     }
+
+    order.totalprice = totalPrice;
+    $('#total-price').text(`Total price: ${ order.totalprice }$`);
+    
+    const payment_option = payment_options.find(x => x.name == order.payment);
+    $('#selected-payment').addClass(payment_option.icon)
 }
 
 $(document).ready(function () {

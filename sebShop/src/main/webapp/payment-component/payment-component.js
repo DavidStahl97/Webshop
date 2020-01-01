@@ -1,4 +1,4 @@
-const payment_options = [
+var payment_options = [
     {
         name: 'Paypal',
         icon: 'fab fa-paypal'
@@ -34,6 +34,7 @@ function load_payments() {
                 const payment_option = payment_options.find(x => x.name == payment);
 
                 const button_id = `payment-button-${ i }`;
+                payment_option.button_id = button_id;
 
                 $('#payment-option-row').append(`
                     <div class="col">
@@ -45,6 +46,9 @@ function load_payments() {
                 `);
 
                 $(`#${ button_id }`).click(function () {
+                    const payment_option = payment_options.find(x => x.button_id == this.id);
+                    order.payment = payment_option.name;
+
                     nextElement();
                 });
 
