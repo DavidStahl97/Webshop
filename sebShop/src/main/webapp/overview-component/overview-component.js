@@ -22,11 +22,24 @@ function show_articles_summary() {
 
     order.totalprice = totalPrice;
     $('#total-price').text(`Total price: ${ order.totalprice }$`);
-    
+
     const payment_option = payment_options.find(x => x.name == order.payment);
     $('#selected-payment').addClass(payment_option.icon)
 }
 
 $(document).ready(function () {
     show_articles_summary();
+
+    $('#order-button').click(function () {
+        $.ajax({
+            url: 'http://localhost:8080/ordersServlet',
+            data: { order: order },
+            type: 'POST',
+            success: function (data) {
+                console.log(data);
+
+                nextElement();
+            }
+        });
+    });
 });

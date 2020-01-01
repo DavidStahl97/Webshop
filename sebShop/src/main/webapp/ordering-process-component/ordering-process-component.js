@@ -17,6 +17,9 @@ let ordering_elements = [
    {
       name: 'overview',
       icon_class: 'fa-eye'
+   },
+   {
+      name: 'complete-order'
    }
 ];
 
@@ -26,7 +29,7 @@ function nextElement() {
    current_element++;
    const element = ordering_elements[current_element];
 
-   if (current_element == 0) {
+   if (current_element == 0 || current_element == ordering_elements.length - 1) {
       $('#back-button').css('visibility', 'hidden');
    }
    else {
