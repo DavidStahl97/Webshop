@@ -66,7 +66,39 @@
         "price" : 99.99
       } ],
       "orderNo" : 6
+    } ],
+    "david" : [ {
+      "user" : "david",
+      "totalprice" : 334.45000000000005,
+      "date" : "1577974121487",
+      "articles" : [ {
+        "itemName" : "003-A-red-F",
+        "size" : "XSS",
+        "quantity" : 0,
+        "price" : 121.19
+      }, {
+        "itemName" : "035-S-white-M",
+        "size" : "XSS",
+        "quantity" : 0,
+        "price" : 38.99
+      }, {
+        "itemName" : "041-S-grey-F",
+        "size" : "XSS",
+        "quantity" : 0,
+        "price" : 72.79
+      }, {
+        "itemName" : "039-C-grey-F",
+        "size" : "XSS",
+        "quantity" : 0,
+        "price" : 32.49
+      }, {
+        "itemName" : "005-B-black-F",
+        "size" : "XSS",
+        "quantity" : 0,
+        "price" : 68.99
+      } ],
+      "orderNo" : 7
     } ]
   },
-  "numberOfOrders" : 6
+  "numberOfOrders" : 7
 }

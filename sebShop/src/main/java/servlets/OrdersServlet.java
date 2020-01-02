@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -37,7 +38,7 @@ public class OrdersServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
 
-            String orderJSON = request.getParameter("order");
+            String orderJSON = getRequestBody(request);
             ObjectMapper mapper = new ObjectMapper();
             Order order = mapper.readValue(orderJSON, Order.class);
 
@@ -86,6 +87,28 @@ public class OrdersServlet extends HttpServlet {
         }
 
     }
+    /**
+     * Gets the request body from the request.
+     *
+     * @param request the request
+     * @return the request body
+     */
+    private String getRequestBody(final HttpServletRequest request) {
+        final StringBuilder builder = new StringBuilder();
+        try (BufferedReader reader = request.getReader()) {
+            if (reader == null) {
 
+                return null;
+            }
+            String line;
+            while ((line = reader.readLine()) != null) {
+                builder.append(line);
+            }
+            return builder.toString();
+        } catch (final Exception e) {
+
+            return null;
+        }
+    }
 
 }

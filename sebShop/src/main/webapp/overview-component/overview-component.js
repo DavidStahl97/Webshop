@@ -31,9 +31,28 @@ $(document).ready(function () {
     show_articles_summary();
 
     $('#order-button').click(function () {
+
+        const orderRequest = {
+            user: order.user,
+            totalprice: order.totalprice,
+            date: order.date,
+            articles: []
+        };
+
+        for (const article of order.articles) {
+            orderRequest.articles.push({
+                itemName: article.itemName,
+                size: article.size,
+                price: article.price,
+                quantity: article.quantity
+            });
+        }
+
+
         $.ajax({
             url: 'http://localhost:8080/ordersServlet',
-            data: { order: order },
+            data: JSON.stringify(orderRequest),
+            contentType: 'application/json',
             type: 'POST',
             success: function (data) {
                 console.log(data);

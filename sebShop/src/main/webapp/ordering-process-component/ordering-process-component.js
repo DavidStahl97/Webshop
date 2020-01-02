@@ -1,6 +1,7 @@
 var order = {
    payment: '',
    price: 0,
+   user: 'david',
    date: Date.now(),
    articles: []
 };
