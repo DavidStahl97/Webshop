@@ -1,0 +1,58 @@
+.login-wrapper{
+    height: 100vh;
+    background-color: aqua;
+}
+
+.login-box{
+    margin: auto;
+    width: 60vh;
+    height: 90vh;
+    border-top: 10vh solid aqua;
+    background-color: green;
+}
+
+.login-content{
+    border: 5vh solid green;
+    font-family: Bahnschrift;
+}
+
+.login-logo-part{
+    min-height: 30vh;
+}
+
+.login-input-part{
+    min-height: 40vh;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.login-picture{
+    text-align: center;
+    margin-left: 10vh;
+    height: 60%;
+    width: 60%;
+}
+
+.login-slogan{
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.login-input-part-top {
+    line-height: 7vh;
+    margin-bottom: 5vh;
+    background-color: green;
+}
+
+.login-log-button{
+    background-color: white;
+    height: 5vh;
+    width: 50vh;
+    font-weight: bold;
+    font-size: 3vh;
+}
+.login-input-field{
+    font-size: 2vh;
+    line-height: 2.5vh;
+}

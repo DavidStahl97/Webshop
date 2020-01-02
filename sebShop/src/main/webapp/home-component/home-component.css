@@ -1,0 +1,100 @@
+.home-wrapper{
+    height: 100vh;
+    font-family: Bahnschrift;
+}
+
+.home-header{
+    height: 20vh;
+    background-color: green;
+    border: 1px solid black;
+}
+
+.home-title{
+    text-align: center;
+    font-size: 300%;
+    line-height: 300%;
+}
+
+.home-body{
+    height: 80vh;
+    background-color: aqua;
+    display: flex;
+}
+
+.home-filter-bar{
+    width:15%;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.home-filter-bar-text{
+    font-size: 200%;
+}
+
+.home-select{
+    background-color: yellow;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.home-slider-container{
+    padding: 1vh;
+    background-color: yellow;
+
+}
+
+.home-content{
+    width: 100%;
+}
+
+.home-search{
+    height: 20%;
+    text-align: center;
+    display: flex;
+}
+
+.home-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 70%;
+}
+
+.home-cell {
+    flex: 0 0 32%;
+    min-height: 50px;
+    margin-bottom: 5px;
+    background-color: yellow;
+    border: 1px solid black;
+}
+.home-cell:nth-child(2n) {
+    background-color: orange;
+}
+
+.home-chooser{
+    text-align: center;
+    height: 10%;
+}
+
+.home-nav-button{
+    padding: 1vh;
+    margin: 1vh;
+    background-color: yellow;
+}
+
+.home-search-input{
+    width: 70%;
+    height: 100%;
+}
+
+.home-extra-filter{
+    width: 30%;
+    margin-top: 2vh;
+    font-size: 200%;
+}
+
+.home-search-input-component{
+    margin-top: 3vh;
+    font-size: 200%;
+}

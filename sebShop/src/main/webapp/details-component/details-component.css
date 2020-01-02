@@ -1,0 +1,91 @@
+.details-wrapper{
+    height: 100vh;
+    font-family: Bahnschrift;
+}
+
+.details-header{
+    height: 20vh;
+    background-color: green;
+}
+
+.details-title{
+    text-align: center;
+    font-size: 300%;
+    line-height: 300%;
+}
+
+.details-body{
+    height: 80vh;
+    background-color: aqua;
+    display: flex;
+}
+
+.details-back{
+    width: 5%;
+}
+
+.details-back-button{
+    background-color: black;
+    color: white;
+    padding: 1vh;
+    border-radius: 50%;
+    margin: 3vh;
+}
+
+.details-picture-part{
+    width: 35%;
+}
+
+.details-picture{
+    max-width: 100%;
+}
+
+.details-infos{
+    width: 60%;
+}
+
+.details-article-name{
+    height: 10%;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 200%;
+}
+
+.details-product-info{
+    height: 50%;
+    width: 80%;
+}
+
+.details-tags{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.details-tag{
+    padding: 1vh;
+    background-color: yellow;
+    margin-right: 3vh;
+}
+
+.details-price{
+    height: 10%;
+    width: 80%;
+    font-size: 130%;
+}
+
+.details-buy{
+    height: 10%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.details-select{
+    background-color: yellow;
+}
+
+.details-buy-button{
+    background-color: yellow;
+    padding: 1vh;
+}
