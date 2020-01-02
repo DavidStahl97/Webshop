@@ -1,6 +1,6 @@
 
 
-console.log("used");
+console.log("used2");
 
 $("#details-button").click(function(){
     console.log("detail");

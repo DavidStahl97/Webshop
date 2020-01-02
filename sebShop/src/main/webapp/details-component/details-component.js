@@ -1,4 +1,4 @@
-
+console.log("Details");
 
 
 $("#back-button").click(function(){
