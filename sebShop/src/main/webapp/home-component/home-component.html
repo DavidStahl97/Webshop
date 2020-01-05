@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="home-component/home-component.css">
+<link rel="stylesheet" type="text/css" href="home-component/home-component.css" xmlns="http://www.w3.org/1999/html">
 <script language="javascript" type="text/javascript" src="home-component/home-component.js"/>
 
 
@@ -10,49 +10,74 @@
     <div class="home-body">
         <div class="home-filter-bar">
             <div class="home-filter-bar-text">Filters</div>
-            <select class="home-select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+            <span>for:</span></br>
+            <select class="home-select" id="gender-select">
+                <option value="all">all</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
             </select></br>
-            <select class="home-select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+            <span>Colour:</span></br>
+            <select class="home-select" id="colour-select">
+                <option value="all">all</option>
+                <option value="black">black</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="grey">grey</option>
+                <option value="brown">brown</option>
+                <option value="red">red</option>
+                <option value="white">white</option>
             </select></br>
-            <select class="home-select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+            <span>Brand:</span></br>
+            <select class="home-select" id="brand-select">
+                <option value="all">all</option>
+                <option value="Bsics">Bsics</option>
+                <option value="Superwet">Superwet</option>
+                <option value="Tim Tailor">Tim Tailor</option>
+                <option value="Calvin Groß">Calvin Groß</option>
+                <option value="Buma">Buma</option>
+                <option value="Mike">Mike</option>
+                <option value="Adodos">Adodos</option>
             </select></br>
-            <select class="home-select">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
+            <span>Product:</span></br>
+            <select class="home-select" id="product-select">
+                <option value="all">all</option>
+                <option value="Skirts">Skirts</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Trousers">Trousers</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Shirt">Shirt</option>
+                <option value="Jackets and Coats">Jackets and Coats</option>
+                <option value="Dress">Dress</option>
+                <option value="Underwear">Underwear</option>
+                <option value="Pullovers">Pullovers</option>
+                <option value="Other">Other</option>
             </select></br>
-            <div class="home-slider-container">
-                <span>Price</span></br>
-                <input class="home-number-slider"type="range" min="1" max="100" value="50" >
-            </div>
-
+            <span>max Price:</span></br>
+            <select class="home-select" id="price-select">
+                <option value="all">all</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="200">200</option>
+            </select></br>
+            <span>sort By:</span></br>
+            <select class="home-select" id="filter-select">
+                <option value="none">none</option>
+                <option value="Name">Name</option>
+                <option value="Name Asc">Name Asc</option>
+                <option value="Price">Price</option>
+                <option value="Price Asc">Price Asc</option>
+            </select></br>
+            <button class="home-nav-button" id="filter-button">filter</button>
         </div>
         <div class="home-content">
             <div class="home-search">
                 <div class="home-search-input">
                     <span class="home-search-input-component">Search:</span>
-                    <input class="home-search-input-component" type="text" name="LastName">
+                    <input class="home-search-input-component" type="text" name="search" id="input-search">
                 </div>
                 <div class="home-extra-filter">
-                    <select class="home-select">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select></br>
+                    <button class="home-nav-button" id="search-button">search</button>
+                    <button class="home-nav-button" id="reload-button">reload</button>
                 </div>
             </div>
             <div class="home-grid">
@@ -75,9 +100,5 @@
 
     </div>
 </div>
-
-
-<div> Mein Shop</div>
-<button id="details-button">Zur Detail ansicht</button>
 
 
