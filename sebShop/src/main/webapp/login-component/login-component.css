@@ -57,3 +57,9 @@
     font-size: 2vh;
     line-height: 2.5vh;
 }
+
+.login-temp-button{
+    padding: 2vh;
+    background-color: #ff253a;
+    border: 10px solid green ;
+}

@@ -3,9 +3,12 @@ var all_articles_backUp = [];
 var position = 0;
 var page = 1;
 var details_element;
-
 $("#login-button").click(function(){
-    $("body").load("main-component/main-component.html");
+    login();//$("body").load("main-component/main-component.html");
+});
+
+$("#login-register-button").click(function(){
+    register();//$("body").load("main-component/main-component.html");
 });
 
 $(document).ready(function () {
@@ -35,3 +38,35 @@ function load_all_articles() {
         }
     });
 }
+function register() {
+    $.ajax({
+        url: 'http://localhost:8080/loginServlet',
+        data: {
+            name: $("#login-name").val(),
+            passwort: $("#login-passwort").val()
+        },
+        type: 'POST',
+        success: function (data) {
+            answer = JSON.parse(data);
+            $("#login-answer").html(answer.success);
+        }
+    });
+}
+function login() {
+    $.ajax({
+        url: 'http://localhost:8080/loginServlet',
+        data: {
+            name: $("#login-name").val(),
+            passwort: $("#login-passwort").val()
+        },
+        type: 'GET',
+        success: function (data) {
+            answer = JSON.parse(data);
+            $("#login-answer").html(answer.success);
+        }
+    });
+}
+
+$("#login-zu-main").click(function(){
+    $("body").load("main-component/main-component.html");
+});
