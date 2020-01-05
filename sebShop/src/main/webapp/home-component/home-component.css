@@ -5,8 +5,9 @@
 
 .home-header{
     height: 20vh;
-    background-color: green;
-    border: 1px solid black;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
 }
 
 .home-title{
@@ -17,13 +18,14 @@
 
 .home-body{
     height: 80vh;
-    background-color: aqua;
+    background-color: black;
     display: flex;
+    color: white;
 }
 
 .home-filter-bar{
     width:15%;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     text-align: center;
 }
 
@@ -32,14 +34,16 @@
 }
 
 .home-select{
-    background-color: yellow;
+    background-color: white;
+    color: black;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
 .home-slider-container{
     padding: 1vh;
-    background-color: yellow;
+    background-color: white;
+    color: black;
 
 }
 
@@ -65,11 +69,13 @@
     flex: 0 0 32%;
     min-height: 50px;
     margin-bottom: 5px;
-    background-color: yellow;
+    background-color: lightgrey;
+    color: black;
     border: 1px solid black;
+    cursor: pointer;
 }
 .home-cell:nth-child(2n) {
-    background-color: orange;
+    background-color: darkgrey;
 }
 
 .home-chooser{
@@ -80,7 +86,8 @@
 .home-nav-button{
     padding: 1vh;
     margin: 1vh;
-    background-color: yellow;
+    background-color: grey;
+    color: black;
 }
 
 .home-search-input{
@@ -97,4 +104,10 @@
 .home-search-input-component{
     margin-top: 3vh;
     font-size: 200%;
+}
+
+.home-item-picture{
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
 }

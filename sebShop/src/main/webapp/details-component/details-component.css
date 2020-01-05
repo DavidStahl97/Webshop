@@ -5,7 +5,9 @@
 
 .details-header{
     height: 20vh;
-    background-color: green;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
 
 .details-title{
@@ -16,7 +18,8 @@
 
 .details-body{
     height: 80vh;
-    background-color: aqua;
+    background-color: black;
+    color: white;
     display: flex;
 }
 
@@ -25,10 +28,8 @@
 }
 
 .details-back-button{
-    background-color: black;
-    color: white;
+    background-color: white;
     padding: 1vh;
-    border-radius: 50%;
     margin: 3vh;
 }
 
@@ -60,12 +61,14 @@
     height: 20%;
     display: flex;
     align-items: center;
+    color: black;
 }
 
 .details-tag{
     padding: 1vh;
-    background-color: yellow;
+    background-color: lightgrey;
     margin-right: 3vh;
+    color: black;
 }
 
 .details-price{
@@ -82,10 +85,21 @@
 }
 
 .details-select{
-    background-color: yellow;
+    background-color: lightgrey;
+    margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 .details-buy-button{
-    background-color: yellow;
+    background-color: lightgrey;
     padding: 1vh;
+}
+
+.details-white-picture{
+    color: white;
+    background-color: white;
+    width: 80%;
+    height: 60%;
+    margin: 1vh;
+    border-radius: 20%;
 }

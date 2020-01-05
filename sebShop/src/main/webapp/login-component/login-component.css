@@ -1,18 +1,19 @@
 .login-wrapper{
     height: 100vh;
-    background-color: aqua;
+    background-color: white;
 }
 
 .login-box{
     margin: auto;
     width: 60vh;
     height: 90vh;
-    border-top: 10vh solid aqua;
-    background-color: green;
+    border-top: 10vh solid white;
+    background-color: black;
+    color: white;
 }
 
 .login-content{
-    border: 5vh solid green;
+    border: 5vh solid black;
     font-family: Bahnschrift;
 }
 
@@ -42,7 +43,7 @@
 .login-input-part-top {
     line-height: 7vh;
     margin-bottom: 5vh;
-    background-color: green;
+    background-color: black;
 }
 
 .login-log-button{

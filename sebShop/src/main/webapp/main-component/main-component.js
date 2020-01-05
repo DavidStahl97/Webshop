@@ -15,10 +15,14 @@ $(document).ready(function () {
     });
 
     $("#logout-link").click(function () {
-        $("#container").load("login-component/login-component.html");
+        $("body").empty();
+        $("body").load("login-component/login-component.html");
     });
 
     $('#order-list-link').click(function () {
         $("#main-div").load("order-list-component/order-list-component.html");
     });
+
+    $("#main-div").load("home-component/home-component.html");
+
 });

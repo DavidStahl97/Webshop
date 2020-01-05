@@ -5,47 +5,50 @@
 <div class="details-wrapper">
 
     <div class="details-header">
-        <div class="details-title">My Details</div>
+        <div class="details-title">Item Details</div>
     </div>
     <!-- align-items: center; -->
     <div class="details-body">
         <div class="details-back">
             <button class="details-back-button" id="back-button"><</button>
         </div>
-        <div class="details-picture-part">
-            <img  class="details-picture" src="002.png">
+        <div class="details-picture-part" id="details-article-picture">
+            <<!-- -->
         </div>
         <div class="details-infos">
-            <div class="details-article-name">Article Name</div>
-            <div class="details-product-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            <div class="details-article-name" id="details-article-name"></div>
+            <div class="details-product-info" id="details-article-description">
             </div>
             <div class="details-tags">
-                <div class="details-tag">#for him</div>
-                <div class="details-tag">#blue</div>
-                <div class="details-tag">#adidas</div>
-                <div class="details-tag">#T shirt</div>
+                <div class="details-tag" id="details-tag-1"></div>
+                <div class="details-tag" id="details-tag-2"></div>
+                <div class="details-tag" id="details-tag-3">#adidas</div>
+                <div class="details-tag" id="details-tag-4">#T shirt</div>
             </div>
-            <div class="details-price">29.90$</div>
+            <div class="details-price" id="details-article-price"></div>
             <div class="details-buy">
-                <select class="details-select">
-                    <option value="volvo">Mercedes</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                <span>Size: </span>
+                <select class="details-select" id="details-select-size">
+                    <option value="XSS">XSS</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
                 </select>
-                <select class="details-select">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                <span>Quantity: </span>
+                <select class="details-select" id="details-select-quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
                 </select>
-                <button class="details-buy-button">buy</button>
+                <button class="details-buy-button" id="details-buy-item">buy</button>
             </div>
         </div>
     </div>
