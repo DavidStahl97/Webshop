@@ -9,9 +9,14 @@ $("#details-buy-item").click(function(){
     let sizeValue = e1.options[e1.selectedIndex].value;
     let e2 = document.getElementById("details-select-quantity");
     let quantityValue = e2.options[e2.selectedIndex].value;
-    $('#details-article-description').append(`
-        <span>${sizeValue}+${quantityValue}</span>
-    `);
+    order.articles.push({
+        itemName: details_element.itemName,
+        price: details_element.price,
+        size: sizeValue,
+        quantity: quantityValue,
+        imgPath: details_element.imgPath
+    });
+    $("#main-div").load("home-component/home-component.html");
 });
 
 
