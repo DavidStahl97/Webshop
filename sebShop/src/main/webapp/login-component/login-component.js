@@ -3,6 +3,14 @@ var all_articles_backUp = [];
 var position = 0;
 var page = 1;
 var details_element;
+var order = {
+    payment: '',
+    price: 0,
+    user: '',
+    date: Date.now(),
+    articles: []
+};
+
 
 $("#login-button").click(function(){
     login();//$("body").load("main-component/main-component.html");
@@ -49,7 +57,14 @@ function register() {
         type: 'POST',
         success: function (data) {
             answer = JSON.parse(data);
-            $("#login-answer").text(answer.success);
+           // $("#login-answer").text(answer.success);
+            if(answer.success == true){
+                order.user = $("#login-name").val();
+                $('#login-answer').text('Registierung erfolgreich');
+                $("body").load("main-component/main-component.html");
+            } else {
+                $('#login-answer').text('Fehler bei der Registierung.');
+            }
         }
     });
 }
@@ -64,11 +79,13 @@ function login() {
         success: function (data) {
             answer = JSON.parse(data);
             $("#login-answer").text(answer.success);
+            if(answer.success == true ){
+                order.user = $("#login-name").val();
+                $('#login-answer').text('Anmeldung erfolgreich');
+                $("body").load("main-component/main-component.html");
+            } else {
+                $('#login-answer').text('Fehler bei der Anmeldung.')
+            }
         }
     });
 }
-
-$("#login-zu-main").click(function(){
-
-    $("body").load("main-component/main-component.html");
-});
