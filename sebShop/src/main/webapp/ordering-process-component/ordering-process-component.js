@@ -49,31 +49,7 @@ function on_back_button_click() {
    nextElement();
 }
 
-function save_articles() {
-   $.ajax({
-      url: 'http://localhost:8080/shopItemsServlet',
-      data: {},
-      type: 'GET',
-      success: function (data) {
-         let shop_items = JSON.parse(data);
-
-         for(let i = 0; i < 5; i++) {
-            order.articles.push({
-               itemName: shop_items[i].id,
-               price: shop_items[i].price,
-               size: 'XSS',
-               quantity: 1,
-               imgPath: shop_items[i].imgPath
-            });
-         }
-
-         nextElement();
-      }
-   });
-}
-
 $(document).ready(function () {
    $('#back-button').click(function () { on_back_button_click() });
-
-   save_articles();
+   nextElement();
 });
