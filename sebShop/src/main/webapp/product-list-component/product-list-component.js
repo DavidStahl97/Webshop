@@ -61,7 +61,12 @@ $(document).ready(function () {
         nextElement();
     });
 
-    show_articles();
+    if (order.articles.length > 0) {
+        show_articles();
+    }
+    else {
+        $('#next-button').css('visibility', 'hidden');
+    }
 });
 
   

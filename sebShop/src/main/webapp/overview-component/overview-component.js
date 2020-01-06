@@ -48,6 +48,14 @@ $(document).ready(function () {
             });
         }
 
+        order = {
+            payment: '',
+            price: 0,
+            user: order.user,
+            date: Date.now(),
+            articles: []
+        };
+
 
         $.ajax({
             url: 'http://localhost:8080/ordersServlet',
