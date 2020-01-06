@@ -3,6 +3,7 @@ var all_articles_backUp = [];
 var position = 0;
 var page = 1;
 var details_element;
+
 $("#login-button").click(function(){
     login();//$("body").load("main-component/main-component.html");
 });
@@ -48,7 +49,7 @@ function register() {
         type: 'POST',
         success: function (data) {
             answer = JSON.parse(data);
-            $("#login-answer").html(answer.success);
+            $("#login-answer").text(answer.success);
         }
     });
 }
@@ -62,11 +63,12 @@ function login() {
         type: 'GET',
         success: function (data) {
             answer = JSON.parse(data);
-            $("#login-answer").html(answer.success);
+            $("#login-answer").text(answer.success);
         }
     });
 }
 
 $("#login-zu-main").click(function(){
+
     $("body").load("main-component/main-component.html");
 });
