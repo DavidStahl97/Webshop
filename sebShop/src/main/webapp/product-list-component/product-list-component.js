@@ -1,5 +1,6 @@
 function show_articles() {
     let i = 0;
+
     for(const article of order.articles) {
         const select_size_id = `select-size-${ i }`;
         const select_quantity_id = `select-quantity-${ i }`;
@@ -35,10 +36,13 @@ function show_articles() {
                             <option>9</option>
                         </select>
                     </div>                   
-                    <small id="${ small_article_price_id }">${ article.price }</small>
+                    <small id="${ small_article_price_id }">${ article.price }$</small>
                 </div>                        
             </div>
         `);
+
+        $(`#${ select_size_id }`).val(article.size);
+        $(`#${ select_quantity_id }`).val(article.quantity);
 
         $(`#${ select_size_id }`).on('change', '', function (e) {
             const n = 'select-size-'.length;

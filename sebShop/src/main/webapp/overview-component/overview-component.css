@@ -6,3 +6,11 @@
 .total-price {
     float: right;
 }
+
+.overview-component-child-div {
+    margin-top: 50px;
+}
+
+#order-button {
+    margin-bottom: 50px;
+}

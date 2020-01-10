@@ -12,7 +12,7 @@ function show_articles_summary() {
                     <div class="vertical-center-element">
                         <p>Quantity: ${ article.quantity }</p>
                     </div>                   
-                    <p>${ article.price * article.quantity }</p>
+                    <p>${ (article.price * article.quantity).toFixed(2) }$</p>
                 </div>                        
             </div>
         `);
@@ -21,7 +21,7 @@ function show_articles_summary() {
     }
 
     order.totalprice = totalPrice;
-    $('#total-price').text(`Total price: ${ order.totalprice }$`);
+    $('#total-price').text(`Total price: ${ order.totalprice.toFixed(2) }$`);
 
     const payment_option = payment_options.find(x => x.name == order.payment);
     $('#selected-payment').addClass(payment_option.icon)
@@ -35,7 +35,7 @@ $(document).ready(function () {
         const orderRequest = {
             user: order.user,
             totalprice: order.totalprice,
-            date: order.date,
+            date: String(new Date()),
             articles: []
         };
 
@@ -52,10 +52,8 @@ $(document).ready(function () {
             payment: '',
             price: 0,
             user: order.user,
-            date: Date.now(),
             articles: []
         };
-
 
         $.ajax({
             url: 'http://localhost:8080/ordersServlet',
@@ -63,8 +61,6 @@ $(document).ready(function () {
             contentType: 'application/json',
             type: 'POST',
             success: function (data) {
-                console.log(data);
-
                 nextElement();
             }
         });
